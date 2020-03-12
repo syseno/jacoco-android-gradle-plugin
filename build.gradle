@@ -7,8 +7,6 @@ plugins {
   id 'com.jfrog.bintray' version '1.8.4'
 }
 
-sourceCompatibility = JavaVersion.VERSION_1_5
-
 configurations {
   provided
 }
@@ -38,7 +36,6 @@ scmVersion {
   versionCreator "versionWithBranch"
 }
 
-group = 'com.dicedmelon.gradle'
 version = scmVersion.version
 
 test {
@@ -63,7 +60,6 @@ publishing {
   publications {
     plugin(MavenPublication) {
       from components.java
-
       artifact sourcesJar
     }
   }
